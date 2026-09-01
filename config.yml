@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "hr"
+
+collections:
+  - name: "vijesti"
+    label: "Naslovna – aktualne vijesti"
+    files:
+      - file: "data/vijesti.json"
+        label: "Dvije vijesti na naslovnici"
+        name: "vijesti"
+        fields:
+          - label: "Vijesti"
+            name: "items"
+            widget: "list"
+            min: 2
+            max: 2
+            summary: "{{naslov}}"
+            fields:
+              - { label: "Naslov", name: "naslov", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Poveznica na stranicu (npr. aktivnosti.html)", name: "link", widget: "string" }
+              - { label: "Tekst poveznice", name: "linkText", widget: "string" }
+
+  - name: "aktivnosti"
+    label: "Vremenska crta aktivnosti"
+    files:
+      - file: "data/aktivnosti.json"
+        label: "Popis aktivnosti"
+        name: "aktivnosti"
+        fields:
+          - label: "Događaji (poredani kronološki)"
+            name: "items"
+            widget: "list"
+            summary: "{{datum}} — {{naslov}}"
+            fields:
+              - { label: "Datum (npr. Kolovoz 2026.)", name: "datum", widget: "string" }
+              - { label: "Naslov događaja", name: "naslov", widget: "string" }
+              - { label: "Opis", name: "opis", widget: "text" }
+
+  - name: "statistike"
+    label: "Brojke na naslovnici"
+    files:
+      - file: "data/statistike.json"
+        label: "Tri statistike"
+        name: "statistike"
+        fields:
+          - label: "Statistike"
+            name: "items"
+            widget: "list"
+            min: 3
+            max: 3
+            summary: "{{broj}}"
+            fields:
+              - { label: "Broj (npr. 2 900+)", name: "broj", widget: "string" }
+              - { label: "Opis ispod broja", name: "opis", widget: "string" }
