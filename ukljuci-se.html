@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uključi se — Prijatelji Gacke</title>
+<meta name="description" content="Potpiši peticiju, postani član ili se javi udruzi Prijatelji Gacke.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#glavni">Preskoči na sadržaj</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20C6 14 9 24 13 18C17 12 20 22 24 16C26 13 27 15 28 14" stroke="#1F4A42" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Prijatelji Gacke
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">Izbornik</button>
+    <nav class="primary" id="primaryNav">
+      <a href="index.html">Početna</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="gacka.html">Rijeka Gacka</a>
+      <a href="aktivnosti.html">Aktivnosti</a>
+      <a href="ukljuci-se.html" aria-current="page">Uključi se</a>
+    </nav>
+  </div>
+</header>
+
+<main id="glavni">
+
+  <section class="section-tight" style="padding-top:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Pridruži nam se</p>
+      <h1 style="max-width:16ch;">Tri načina da pomogneš Gacki</h1>
+      <p class="lede" style="color:#3C463F; max-width:58ch;">Zaštita rijeke ne staje na dopisima i sastancima — treba nam širok krug ljudi koji potpisuju, prate stanje na terenu i dijele znanje. Odaberi kako se možeš uključiti.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap grid-3">
+      <div class="card">
+        <h3>1. Potpiši peticiju</h3>
+        <p>Podrži zahtjev da se Gacka i njezin speleološki sustav proglase krškim fenomenom od posebnog značaja i zaštite od daljnjih zahvata.</p>
+        <a class="btn btn-deep" href="https://www.peticijeonline.com/peticija_za_zatitu_rijeke_gacke_i_njenih_izvora" target="_blank" rel="noopener">Potpiši online</a>
+      </div>
+      <div class="card">
+        <h3>2. Postani član udruge</h3>
+        <p>Članovi dobivaju obavijesti o sastancima, sudjeluju u odlučivanju i pomažu proširiti stručnu i terensku snagu udruge.</p>
+        <a class="btn btn-deep" href="pristupnica-udruga-prijatelji-gacke.pdf" target="_blank" rel="noopener">Preuzmi pristupnicu (PDF)</a>
+        <p class="figure-caption" style="margin-top:10px;">Ispunite u PDF čitaču ili rukom nakon ispisa, i pošaljite na info@prijateljigacke.hr.</p>
+      </div>
+      <div class="card">
+        <h3>3. Prijavi problem na terenu</h3>
+        <p>Uočio si sumnjiv ispust, gradnju uz vodotok ili druge znakove ugrožavanja rijeke? Javi nam lokaciju i opis, pomažeš da brzo reagiramo.</p>
+        <a class="btn btn-deep" href="#kontakt-forma">Ispuni prijavu</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--mist);" id="kontakt-forma">
+    <div class="wrap two-col">
+      <div>
+        <h2>Piši nam</h2>
+        <p>Ova forma šalje poruku izravno na e-mail udruge. Za hitne terenske prijave (npr. vidljivo onečišćenje) najbrže je nazvati ili poslati fotografiju putem Facebook stranice.</p>
+        <p class="figure-caption">Napomena: forma na ovoj statičnoj stranici zahtijeva povezivanje s besplatnom uslugom za slanje pošte (npr. Formspree ili sličan servis) prilikom postavljanja na hosting — objašnjeno u bilješci uz predložak.</p>
+        <div style="margin-top:24px;">
+          <h3 style="font-size:1.05rem;">Ostali kontakti</h3>
+          <ul class="list-check" style="margin-top:10px;">
+            <li>E-mail: <a href="mailto:info@prijateljigacke.hr">info@prijateljigacke.hr</a></li>
+            <li>Facebook: <a href="https://www.facebook.com/p/Prijatelji-Gacke-100092596492673/" target="_blank" rel="noopener">Prijatelji Gacke</a></li>
+            <li>Sjedište: Otočac, Ličko-senjska županija</li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-box">
+        <form action="#" method="POST">
+          <label for="ime">Ime i prezime</label>
+          <input type="text" id="ime" name="ime" required>
+
+          <label for="email">E-mail adresa</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="tema">Razlog javljanja</label>
+          <select id="tema" name="tema">
+            <option>Učlanjenje u udrugu</option>
+            <option>Prijava problema na terenu</option>
+            <option>Suradnja / medijski upit</option>
+            <option>Nešto drugo</option>
+          </select>
+
+          <label for="poruka">Poruka</label>
+          <textarea id="poruka" name="poruka" rows="5" required></textarea>
+
+          <button type="submit" class="btn btn-accent" style="margin-top:18px;">Pošalji poruku</button>
+          <p class="form-note">Odgovaramo u pravilu unutar nekoliko dana. Podaci se koriste isključivo za komunikaciju s tobom.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="callout">
+        <h2 style="max-width:18ch;">Hvala što čuvaš Gacku s nama</h2>
+        <p style="color:#D9CFB0; max-width:52ch;">Rijeka koja teče 60 godina otkad joj je oduzeto 20 kilometara toka zaslužuje da joj sljedećih 60 budu drukčija.</p>
+        <a class="btn btn-line" href="aktivnosti.html">Pogledaj što je udruga dosad postigla</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Prijatelji Gacke</h4>
+      <p style="max-width:34ch; color:#B7AE93;">Udruga osnovana 2023. u Otočcu radi očuvanja rijeke Gacke, njezinih prirodnih ljepota, bioraznolikosti i održivog razvoja kraja.</p>
+    </div>
+    <div>
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="gacka.html">Rijeka Gacka</a></li>
+        <li><a href="aktivnosti.html">Aktivnosti</a></li>
+        <li><a href="ukljuci-se.html">Uključi se</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:info@prijateljigacke.hr">info@prijateljigacke.hr</a></li>
+        <li><a href="https://www.facebook.com/p/Prijatelji-Gacke-100092596492673/" target="_blank" rel="noopener">Facebook stranica</a></li>
+        <li>Otočac, Ličko-senjska županija</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Udruga Prijatelji Gacke</span>
+    <span>Neslužbena predložena web stranica</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menuBtn').addEventListener('click', function(){
+  var nav = document.getElementById('primaryNav');
+  var open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+</script>
+</body>
+</html>

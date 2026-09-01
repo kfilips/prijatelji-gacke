@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aktivnosti — Prijatelji Gacke</title>
+<meta name="description" content="Vremenska crta djelovanja udruge Prijatelji Gacke — od osnutka do najnovijih inicijativa.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#glavni">Preskoči na sadržaj</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20C6 14 9 24 13 18C17 12 20 22 24 16C26 13 27 15 28 14" stroke="#1F4A42" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Prijatelji Gacke
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">Izbornik</button>
+    <nav class="primary" id="primaryNav">
+      <a href="index.html">Početna</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="gacka.html">Rijeka Gacka</a>
+      <a href="aktivnosti.html" aria-current="page">Aktivnosti</a>
+      <a href="ukljuci-se.html">Uključi se</a>
+    </nav>
+  </div>
+</header>
+
+<main id="glavni">
+
+  <section class="section-tight" style="padding-top:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Kronologija</p>
+      <h1 style="max-width:18ch;">Što smo do sada napravili</h1>
+      <p class="lede" style="color:#3C463F; max-width:60ch;">Pregled ključnih koraka udruge od osnutka do danas. Ovu stranicu ažuriramo kako se pojavljuju nove aktivnosti, dopisi i inicijative.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <ul class="timeline" id="timeline-container">
+        <li><p>Učitavanje vremenske crte…</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="background:var(--mist);">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <h2>Pratimo i podržavamo druge</h2>
+          <p>Uz vlastite inicijative, redovito pratimo rad drugih ekoloških udruga u Lici i Hrvatskom primorju i javno podržavamo njihove kampanje kad se preklapaju s ciljevima zaštite prirode i vode.</p>
+        </div>
+        <div>
+          <h2>Želiš prijaviti aktivnost ili problem?</h2>
+          <p>Ako imaš saznanja o zahvatu, gradnji ili ispustu koji bi mogao ugroziti Gacku, javi nam se — svaka informacija ulazi u naše praćenje stanja rijeke.</p>
+          <a class="btn btn-deep" href="ukljuci-se.html">Kontaktiraj udrugu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Prijatelji Gacke</h4>
+      <p style="max-width:34ch; color:#B7AE93;">Udruga osnovana 2023. u Otočcu radi očuvanja rijeke Gacke, njezinih prirodnih ljepota, bioraznolikosti i održivog razvoja kraja.</p>
+    </div>
+    <div>
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="gacka.html">Rijeka Gacka</a></li>
+        <li><a href="aktivnosti.html">Aktivnosti</a></li>
+        <li><a href="ukljuci-se.html">Uključi se</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:info@prijateljigacke.hr">info@prijateljigacke.hr</a></li>
+        <li><a href="https://www.facebook.com/p/Prijatelji-Gacke-100092596492673/" target="_blank" rel="noopener">Facebook stranica</a></li>
+        <li>Otočac, Ličko-senjska županija</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Udruga Prijatelji Gacke</span>
+    <span>Neslužbena predložena web stranica</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menuBtn').addEventListener('click', function(){
+  var nav = document.getElementById('primaryNav');
+  var open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+fetch('data/aktivnosti.json').then(function(r){ return r.json(); }).then(function(data){
+  var el = document.getElementById('timeline-container');
+  el.innerHTML = '';
+  data.items.forEach(function(item){
+    var li = document.createElement('li');
+    var date = document.createElement('span');
+    date.className = 'date';
+    date.textContent = item.datum;
+    var h3 = document.createElement('h3');
+    h3.textContent = item.naslov;
+    var p = document.createElement('p');
+    p.textContent = item.opis;
+    li.appendChild(date);
+    li.appendChild(h3);
+    li.appendChild(p);
+    el.appendChild(li);
+  });
+}).catch(function(){
+  document.getElementById('timeline-container').innerHTML = '<li><p>Vremenska crta trenutno nije dostupna.</p></li>';
+});
+</script>
+</body>
+</html>
