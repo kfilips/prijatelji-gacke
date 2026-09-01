@@ -1,7 +1,12 @@
 backend:
   name: git-gateway
+  repo: kfilips/prijatelji-gacke
   branch: main
-
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/3cac11af-c892-437d-9980-3ae5c64ade5d/pkce
+  auth_token_endpoint: /sites/3cac11af-c892-437d-9980-3ae5c64ade5d/token
+  gateway_url: https://gateway.decapbridge.com
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
