@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uključi se — Prijatelji Gacke</title>
 <meta name="description" content="Potpiši peticiju, postani član ili se javi udruzi Prijatelji Gacke.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
 <header class="site">
   <div class="nav-row">
     <a class="wordmark" href="index.html">
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20C6 14 9 24 13 18C17 12 20 22 24 16C26 13 27 15 28 14" stroke="#1F4A42" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg width="30" height="30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M100,168 C46,124 24,88 42,58 C56,35 85,34 100,60 C115,34 144,35 158,58 C176,88 154,124 100,168 Z" fill="#1F4A42"/><path d="M50,95 C60,82 71,108 82,95 C93,82 104,108 115,95" fill="none" stroke="#3E7CA6" stroke-width="8" stroke-linecap="round"/><path d="M129,95 C138,84 143,100 150,95" fill="none" stroke="#3E7CA6" stroke-width="8" stroke-linecap="round"/><circle cx="150" cy="95" r="6.5" fill="#3E7CA6"/></svg>
       Prijatelji Gacke
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">Izbornik</button>
@@ -63,7 +66,6 @@
       <div>
         <h2>Piši nam</h2>
         <p>Ova forma šalje poruku izravno na e-mail udruge. Za hitne terenske prijave (npr. vidljivo onečišćenje) najbrže je nazvati ili poslati fotografiju putem Facebook stranice.</p>
-        <p class="figure-caption">Napomena: forma na ovoj statičnoj stranici zahtijeva povezivanje s besplatnom uslugom za slanje pošte (npr. Formspree ili sličan servis) prilikom postavljanja na hosting — objašnjeno u bilješci uz predložak.</p>
         <div style="margin-top:24px;">
           <h3 style="font-size:1.05rem;">Ostali kontakti</h3>
           <ul class="list-check" style="margin-top:10px;">
@@ -74,7 +76,12 @@
         </div>
       </div>
       <div class="form-box">
-        <form action="#" method="POST">
+        <form action="https://formsubmit.co/info@prijateljigacke.hr" method="POST">
+          <input type="hidden" name="_subject" value="Nova poruka s web stranice — Prijatelji Gacke">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://prijatelji-gacke.netlify.app/ukljuci-se.html">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <label for="ime">Ime i prezime</label>
           <input type="text" id="ime" name="ime" required>
 

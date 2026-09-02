@@ -55,11 +55,19 @@ donesu osobno. Nema potrebe za dodatnim servisom. Ako se polja trebaju
 promijeniti, javi pa se PDF prilagodi.
 
 ## Kontakt forma
-Forma na stranici "Uključi se" trenutno ne šalje poštu nikamo (nema backend).
-Za besplatno slanje poruka:
-- Registracija na https://formspree.io (besplatno, do 50 poruka mjesečno)
-- U `ukljuci-se.html` zamijeni `<form action="#" method="POST">` s
-  `<form action="https://formspree.io/f/TVOJ_ID" method="POST">`
+Forma na stranici "Uključi se" već radi bez ikakve registracije — koristi
+besplatnu uslugu **FormSubmit.co**, koja šalje poruke izravno na
+`info@prijateljigacke.hr`. Ništa dodatno nije potrebno postaviti.
+
+Jedino što treba znati:
+- Prva poruka poslana s obrasca aktivira adresu — FormSubmit će na
+  `info@prijateljigacke.hr` poslati jedan potvrdni e-mail (potrebno je
+  kliknuti poveznicu u njemu jednom, nakon čega sve buduće poruke stižu
+  automatski).
+- Ako se e-mail udruge ikad promijeni, potrebno je u `ukljuci-se.html`
+  zamijeniti adresu na dva mjesta: u `action="https://formsubmit.co/..."`
+  i u skrivenom polju `_next` (poveznica na koju se korisnika vrati nakon
+  slanja).
 
 ## Prije objave provjeriti
 - E-mail `info@prijateljigacke.hr` u svim stranicama — zamijeni stvarnim ako nije aktivan.
